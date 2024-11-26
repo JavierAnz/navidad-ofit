@@ -1,0 +1,80 @@
+body {
+    background-color: #626467; /* Fondo claro */
+    font-family: Arial, sans-serif;
+    overflow: hidden; /* Evitar scroll */
+}
+
+.snow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Permitir interacción con otros elementos */
+    z-index: 1; /* Asegúrate de que la nieve esté por encima de la tarjeta */
+}
+
+.snowflake {
+    position: absolute;
+    top: -10px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    pointer-events: none; /* Evitar interacción */
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh); /* Caer hasta la parte inferior de la pantalla */
+    }
+}
+
+
+.container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100%; /* Asegurarse de que el contenedor ocupe toda la altura */
+}
+.card {
+    background-color: #aeaeae; /* Fondo para la tarjeta */
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    z-index: 0; /* Asegúrate de que la tarjeta esté por debajo de la nieve */
+}
+
+.card-header {
+    background-color: #ff4d4d; /* Rojo navideño */
+    color: white;
+    padding: 10px;
+    border-radius: 15px 15px 0 0;
+}
+
+.card-body {
+    padding: 15px;
+    color: #333;
+}
+
+.card-body p {
+    margin: 5px 0;
+}
+
+.card-footer {
+    margin-top: 15px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: 0 0 15px 15px ;
+}
+img {
+    width: 40%;
+    height: auto;
+    border-radius: 15px 15px 0 0;
+}
